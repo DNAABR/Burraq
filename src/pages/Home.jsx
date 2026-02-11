@@ -32,7 +32,7 @@ const Home = () => {
       {/* Hero Section */}
       <Box
         sx={{
-          background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%)',
+          background: 'linear-gradient(135deg, #050505 0%, #121212 50%, #050505 100%)',
           position: 'relative',
           overflow: 'hidden',
           py: { xs: 8, md: 12 },
@@ -44,7 +44,8 @@ const Home = () => {
             right: 0,
             bottom: 0,
             background:
-              'radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%)',
+              'radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 60%)', // More subtle glow
+            pointerEvents: 'none',
           },
         }}
       >
@@ -55,24 +56,24 @@ const Home = () => {
             transition={{ duration: 0.8 }}
           >
             <Box sx={{ textAlign: 'center', mb: 4 }}>
-              <motion.img
-                src="/burraqlogonobg.png"
-                alt="Burraq"
-                style={{
-                  height: '120px',
-                  width: 'auto',
-                  marginBottom: '24px',
+              <Typography
+                variant="h6"
+                sx={{
+                  color: 'secondary.main',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.4em',
+                  mb: 1,
+                  fontWeight: 400,
+                  fontSize: { xs: '0.75rem', md: '1rem' },
                 }}
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              />
+              >
+                Shine Like Burraq
+              </Typography>
               <Typography
                 variant="h1"
                 sx={{
                   mb: 2,
-                  fontSize: { xs: '2.5rem', md: '3.5rem' },
-                  textShadow: '0 4px 20px rgba(212, 175, 55, 0.3)',
+                  textShadow: '0 4px 30px rgba(0, 0, 0, 0.5)',
                 }}
               >
                 Premium Dates & Gift Boxes
@@ -80,11 +81,12 @@ const Home = () => {
               <Typography
                 variant="h5"
                 sx={{
-                  color: 'text.primary',
-                  mb: 4,
+                  color: 'text.secondary',
+                  mb: 6,
                   maxWidth: '700px',
                   mx: 'auto',
-                  fontSize: { xs: '1.25rem', md: '1.5rem' },
+                  fontStyle: 'italic', // Added elegance
+                  fontWeight: 300,
                 }}
               >
                 Exquisite dates filled with premium dry fruits, crafted for those who appreciate luxury
@@ -197,30 +199,35 @@ const Home = () => {
                       display: 'flex',
                       flexDirection: 'column',
                       cursor: 'pointer',
+                      maxWidth: '340px', // Restrict width for sharper appearance
+                      mx: 'auto', // Center in grid item
                     }}
                     onClick={() => navigate('/products')}
                   >
-                    <CardMedia
-                      component="img"
-                      height="280"
-                      image={product.image}
-                      alt={product.name}
-                      sx={{
-                        objectFit: 'cover',
-                        transition: 'transform 0.4s ease',
-                        '&:hover': {
-                          transform: 'scale(1.1)',
-                        },
-                      }}
-                    />
-                    <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
-                      <Typography variant="h5" sx={{ mb: 1, color: 'secondary.main' }}>
+                    <Box sx={{ p: 2, pb: 0 }}> {/* Added padding for "framed" look */}
+                      <CardMedia
+                        component="img"
+                        image={product.image}
+                        alt={product.name}
+                        sx={{
+                          height: 240,
+                          width: '100%',
+                          objectFit: 'cover',
+                          transition: 'transform 0.4s ease',
+                          '&:hover': {
+                            transform: 'scale(1.05)',
+                          },
+                        }}
+                      />
+                    </Box>
+                    <CardContent sx={{ flexGrow: 1, textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
+                      <Typography variant="h5" sx={{ mb: 1, color: 'secondary.main', minHeight: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         {product.name}
                       </Typography>
-                      <Typography variant="body2" sx={{ mb: 2, color: 'text.primary' }}>
+                      <Typography variant="body2" sx={{ mb: 2, color: 'text.primary', minHeight: '50px' }}>
                         {product.description}
                       </Typography>
-                      <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, alignItems: 'center' }}>
+                      <Box sx={{ mt: 'auto', pt: 2, display: 'flex', justifyContent: 'center', gap: 2, alignItems: 'center', borderTop: '1px solid rgba(212, 175, 55, 0.1)' }}>
                         <Typography
                           variant="body2"
                           sx={{ textDecoration: 'line-through', color: 'text.secondary' }}

@@ -66,6 +66,8 @@ const Products = () => {
                       flexDirection: 'column',
                       position: 'relative',
                       overflow: 'visible',
+                      maxWidth: '360px',
+                      mx: 'auto',
                     }}
                   >
                     {/* Featured Badge */}
@@ -75,11 +77,11 @@ const Products = () => {
                         size="small"
                         sx={{
                           position: 'absolute',
-                          top: 16,
-                          right: 16,
+                          top: 24, // Adjusted for padding
+                          right: 24, // Adjusted for padding
                           zIndex: 2,
-                          background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
-                          color: '#1a1a1a',
+                          background: 'linear-gradient(135deg, #F4E4BC 0%, #D4AF37 100%)',
+                          color: '#000000',
                           fontWeight: 600,
                           boxShadow: '0 4px 12px rgba(212, 175, 55, 0.4)',
                         }}
@@ -87,32 +89,38 @@ const Products = () => {
                     )}
 
                     {/* Product Image */}
-                    <Box sx={{ overflow: 'hidden', position: 'relative' }}>
-                      <CardMedia
-                        component="img"
-                        height="300"
-                        image={product.image}
-                        alt={product.name}
-                        sx={{
-                          objectFit: 'cover',
-                          transition: 'transform 0.5s ease',
-                        }}
-                      />
-                      <Box
-                        sx={{
-                          position: 'absolute',
-                          top: 0,
-                          left: 0,
-                          right: 0,
-                          bottom: 0,
-                          background: 'linear-gradient(to top, rgba(26, 26, 26, 0.7) 0%, transparent 50%)',
-                          opacity: 0,
-                          transition: 'opacity 0.4s ease',
-                          '&:hover': {
-                            opacity: 1,
-                          },
-                        }}
-                      />
+                    <Box sx={{ p: 2, pb: 0 }}>
+                      <Box sx={{ overflow: 'hidden', position: 'relative' }}>
+                        <CardMedia
+                          component="img"
+                          image={product.image}
+                          alt={product.name}
+                          sx={{
+                            height: 240,
+                            width: '100%',
+                            objectFit: 'cover',
+                            transition: 'transform 0.5s ease',
+                            '&:hover': {
+                              transform: 'scale(1.05)',
+                            },
+                          }}
+                        />
+                        <Box
+                          sx={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            background: 'linear-gradient(to top, rgba(26, 26, 26, 0.7) 0%, transparent 50%)',
+                            opacity: 0,
+                            transition: 'opacity 0.4s ease',
+                            '&:hover': {
+                              opacity: 1,
+                            },
+                          }}
+                        />
+                      </Box>
                     </Box>
 
                     {/* Product Details */}
@@ -131,7 +139,10 @@ const Products = () => {
                           mb: 1.5,
                           color: 'secondary.main',
                           fontWeight: 600,
-                          minHeight: '64px',
+                          minHeight: '75px', // Adjusted for consistency
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
                         }}
                       >
                         {product.name}
@@ -141,7 +152,7 @@ const Products = () => {
                         sx={{
                           mb: 2,
                           color: 'text.primary',
-                          flexGrow: 1,
+                          minHeight: '85px', // Fixed height for description
                           lineHeight: 1.6,
                         }}
                       >
@@ -151,6 +162,7 @@ const Products = () => {
                       {/* Pricing */}
                       <Box
                         sx={{
+                          mt: 'auto', // Push to bottom
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',

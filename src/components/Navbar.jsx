@@ -40,10 +40,11 @@ const Navbar = () => {
               variant="h5"
               sx={{
                 fontWeight: 700,
-                background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
+                background: 'linear-gradient(135deg, #F4E4BC 0%, #D4AF37 100%)', // Updated gradient
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 display: { xs: 'none', sm: 'block' },
+                letterSpacing: '0.05em', // More spaced out
               }}
             >
               Burraq

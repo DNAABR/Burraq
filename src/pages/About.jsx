@@ -65,51 +65,51 @@ const About = () => {
           </Box>
         </motion.div>
 
+        {/* Center Logo Section */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <Box
+            component="img"
+            src="/burraqlogonobg.png"
+            alt="Burraq"
+            sx={{
+              width: '100%',
+              maxWidth: '300px',
+              height: 'auto',
+              margin: '0 auto 48px auto',
+              display: 'block',
+              filter: 'drop-shadow(0 0 20px rgba(212, 175, 55, 0.2))',
+            }}
+          />
+        </motion.div>
+
         {/* Story Section */}
-        <Grid container spacing={6} sx={{ mb: 8 }}>
-          <Grid item xs={12} md={6}>
+        <Grid container spacing={6} sx={{ mb: 8, justifyContent: 'center' }}>
+          <Grid item xs={12} md={10}>
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Box
-                component="img"
-                src="/burraqlogo.jpeg"
-                alt="Burraq"
-                sx={{
-                  width: '100%',
-                  maxWidth: '400px',
-                  height: 'auto',
-                  margin: '0 auto',
-                  display: 'block',
-                  filter: 'drop-shadow(0 8px 32px rgba(212, 175, 55, 0.3))',
-                }}
-              />
-            </motion.div>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <Typography variant="h3" sx={{ mb: 3, color: 'secondary.main' }}>
+              <Typography variant="h3" sx={{ mb: 3, color: 'secondary.main', textAlign: 'center' }}>
                 Our Story
               </Typography>
-              <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8 }}>
+              <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8, textAlign: 'center' }}>
                 Burraq was founded with a vision to bring the finest dates and premium dry fruit
                 combinations to discerning customers. We believe that luxury should be accessible, and
                 that every gift should be memorable.
               </Typography>
-              <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8 }}>
+              <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8, textAlign: 'center' }}>
                 Our name, Burraq, symbolizes excellence and swiftness in delivering quality products to
                 your doorstep. Each piece in our collection is carefully crafted, combining traditional
                 flavors with contemporary elegance.
               </Typography>
-              <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
+              <Typography variant="body1" sx={{ lineHeight: 1.8, textAlign: 'center' }}>
                 From intimate gatherings to grand celebrations, our premium dates and gift boxes are
                 designed to add a touch of sophistication to every moment.
               </Typography>
@@ -150,6 +150,9 @@ const About = () => {
                   sx={{
                     p: 4,
                     height: '100%',
+                    minHeight: 320,
+                    display: 'flex',
+                    flexDirection: 'column',
                     textAlign: 'center',
                     background: 'linear-gradient(145deg, #1a1a1a 0%, #0a0a0a 100%)',
                     border: '1px solid rgba(212, 175, 55, 0.2)',
@@ -162,10 +165,10 @@ const About = () => {
                   }}
                 >
                   <Box sx={{ color: 'secondary.main', mb: 2 }}>{value.icon}</Box>
-                  <Typography variant="h5" sx={{ mb: 2, color: 'secondary.main' }}>
+                  <Typography variant="h5" sx={{ mb: 2, color: 'secondary.main', minHeight: 64 }}>
                     {value.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.primary', lineHeight: 1.7 }}>
+                  <Typography variant="body2" sx={{ color: 'text.primary', lineHeight: 1.7, flex: 1 }}>
                     {value.description}
                   </Typography>
                 </Paper>

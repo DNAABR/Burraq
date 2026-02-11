@@ -29,6 +29,9 @@ const Footer = () => {
                 Burraq
               </Typography>
             </Box>
+            <Typography variant="body2" sx={{ color: 'secondary.main', mb: 2, letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.75rem' }}>
+              Shine Like Burraq
+            </Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
               Premium dates and gift boxes. Crafted with excellence, delivered with care.
             </Typography>

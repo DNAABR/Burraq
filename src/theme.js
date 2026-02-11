@@ -1,27 +1,27 @@
 import { createTheme } from '@mui/material/styles';
 
-// Premium Black & Gold Theme
+// Premium Emerald & Gold Theme (Royal Dates Choice)
 const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#1a1a1a', // Premium Black
-      light: '#2d2d2d',
-      dark: '#000000',
-      contrastText: '#D4AF37',
+      main: '#1B4D3E', // Deep Emerald Green
+      light: '#2C6E58',
+      dark: '#0D2B22',
+      contrastText: '#F0F7F4',
     },
     secondary: {
       main: '#D4AF37', // Royal Gold
-      light: '#FFD700',
-      dark: '#B8860B',
-      contrastText: '#1a1a1a',
+      light: '#F4D03F',
+      dark: '#A38426',
+      contrastText: '#051410',
     },
     background: {
-      default: '#0a0a0a',
-      paper: '#1a1a1a',
+      default: '#051410', // Very Deep Green/Black
+      paper: '#0B261D',   // Deep Green Card Background
     },
     text: {
-      primary: '#ffffff',
+      primary: '#F0F7F4', // Soft Mist White
       secondary: '#D4AF37',
     },
   },
