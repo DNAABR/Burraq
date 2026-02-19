@@ -44,4 +44,32 @@ export const products = [
     price: 2199,
     featured: true,
   },
+  {
+    id: 6,
+    name: 'Khajoor Bars',
+    description: 'Healthy and energetic bars made with premium dates and nuts',
+    image: '/KhajoorBars.jpeg',
+    originalPrice: 1499,
+    price: 999,
+    featured: true,
+  },
+  {
+    id: 7,
+    name: 'Chocleato',
+    description: 'Premium dates dipped in rich, smooth chocolate for a decadent treat',
+    image: '/Chocleato.jpeg',
+    originalPrice: 1599,
+    price: 1199,
+    featured: true,
+  },
+  {
+    id: 8,
+    name: 'Nutty Delight',
+    description: 'Crunchy premium nuts stuffed inside the finest dates',
+    image: '/NuttyDelight.jpeg',
+    originalPrice: 1499,
+    price: 999,
+    featured: true,
+  },
 ];
+
