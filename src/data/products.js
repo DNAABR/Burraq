@@ -2,7 +2,7 @@ export const products = [
   {
     id: 1,
     name: 'Black Box',
-    description: '12 pieces of premium dates filled with dry fruits, comes with Tasbih',
+    description: '12 pieces of premium dates filled with dry fruits, comes with tasbih',
     image: '/BlackBox.jpeg',
     originalPrice: 1999,
     price: 1499,
