@@ -72,7 +72,7 @@ const Footer = () => {
                     '&:hover': { color: 'secondary.light' },
                   }}
                 >
-                  WhatsApp Us
+                  WhatsApp us
                 </Typography>
               </Box>
             </Box>
