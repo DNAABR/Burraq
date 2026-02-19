@@ -87,10 +87,10 @@ const Footer = () => {
               <LocalShipping sx={{ color: 'secondary.main', mt: 0.5 }} />
               <Box>
                 <Typography variant="body2" sx={{ mb: 0.5 }}>
-                  <strong>Karachi:</strong> Small orders available
+                  <strong>Karachi:</strong> No minimum order required. No shipping charges.
                 </Typography>
                 <Typography variant="body2">
-                  <strong>All Pakistan:</strong> Orders ₨10,000+ (shipping charges apply)
+                  <strong>Rest of Pakistan:</strong> Standard shipping charges apply.
                 </Typography>
               </Box>
             </Box>

@@ -4,8 +4,8 @@ export const products = [
     name: 'Black Box',
     description: '12 pieces of premium dates filled with dry fruits, comes with Tasbih',
     image: '/BlackBox.jpeg',
-    originalPrice: 2899,
-    price: 2490,
+    originalPrice: 1999,
+    price: 1499,
     featured: true,
   },
   {
@@ -22,8 +22,8 @@ export const products = [
     name: 'Assorted Dates Balls (6 Pieces)',
     description: '6 balls made up of dates with special topping',
     image: '/AssortedDatesBalls.jpeg',
-    originalPrice: 2490,
-    price: 1999,
+    originalPrice: 1999,
+    price: 1499,
     featured: true,
   },
   {
@@ -38,7 +38,7 @@ export const products = [
   {
     id: 5,
     name: 'Chocolate Dates with Sesame Seeds',
-    description: '6 dates covered with brown and white chocolate, coated with sesame seeds',
+    description: '12 (2 each) dates covered with brown and white chocolate, coated with sesame seeds',
     image: '/ChocolateDatescoatedwithSesameseeds.jpeg',
     originalPrice: 2490,
     price: 2199,
